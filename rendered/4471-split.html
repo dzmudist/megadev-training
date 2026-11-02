@@ -1,11 +1,22 @@
-<!doctype html><meta charset=utf-8><title>#4471 · three problems, not one · support kb</title>
-<style>body{font:16px/1.6 system-ui;max-width:760px;margin:2rem auto;padding:0 16px}td,th{border-bottom:1px solid #ddd;padding:.3rem .5rem;text-align:left}table{border-collapse:collapse;width:100%}aside{border-left:4px solid #b4501f;background:#fbeee6;padding:.5rem 1rem}</style>
-<h1>#4471 · three problems, not one</h1><p>owner support desk · living · reviewed 2026-11-02</p>
-<p>#4471 was marked known. It holds three problems.</p>
-<table><tr><th>problem</th><th>reports</th><th>ticket</th></tr>
-<tr><td>parser reads dates month first</td><td>379</td><td><a href="https://github.com/dzmudist/megadev-training/issues/1">#1</a></td></tr>
-<tr><td>booking-v3 hint says MM/DD/YYYY</td><td>33</td><td><a href="https://github.com/dzmudist/megadev-training/issues/2">#2</a></td></tr>
-<tr><td>one-day shift</td><td>5</td><td><a href="https://github.com/dzmudist/megadev-training/issues/3">#3</a></td></tr>
-<tr><td><b>total</b></td><td><b>412</b> (the 5 one-day shifts are inside the parser count)</td><td></td></tr></table>
-<aside>Not one issue. A parser fix does not touch the form hint, and neither explains the one-day shifts.</aside>
-<p>Static copy of src/routes/kb/incidents/4471-split/+page.svx.</p>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#4471 · three problems, not one · support kb</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:760px;margin:0 auto;padding:2rem 16px;background:#fbfaf7;color:#1d1d1b}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #e3e0d8;padding:.35rem .5rem;text-align:left}aside{border-left:4px solid #b4501f;background:#fbeee6;padding:.5rem 1rem}.stamp{font:.85rem monospace;color:#6b6a66}</style></head><body>
+<h1>#4471 · three problems, not one</h1>
+<p>owner <b>support desk</b> · living · reviewed 2026-11-02</p>
+<p><a href="/kb/incidents/4471">#4471</a> was marked known: one issue, one fix queued. The reports it holds come from different problems.</p>
+<h2>What was merged</h2>
+<p><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p>
+<table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th></tr></thead><tbody>
+<tr><td><code>parser</code></td><td>379</td><td>parser ×356 · hint ×23</td><td>11</td><td>2026-04-01 → 2026-10-04</td></tr>
+<tr><td><code>hint</code></td><td>33</td><td>hint ×18 · parser ×15</td><td>3</td><td>2026-04-17 → 2026-09-22</td></tr>
+</tbody></table>
+<p>5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p>
+<aside>Not one issue. A parser fix does not touch the form hint.</aside>
+<h2>Tickets</h2>
+<ul><li><a href="https://github.com/dzmudist/megadev-training/issues/1">#1</a> parser reads dates month first: 379 reports</li>
+<li><a href="https://github.com/dzmudist/megadev-training/issues/2">#2</a> booking-v3 hint says MM/DD/YYYY: 33 reports</li>
+<li><a href="https://github.com/dzmudist/megadev-training/issues/3">#3</a> one-day shift: 5 reports (also counted in #1 by tenant)</li></ul>
+<p class="stamp">desk ref <b>DR-4K7C-KWPY</b></p>
+<!-- signature: v1.eyJzdWIiOiIzMTk3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2MTU1NzIsImV4cCI6MTc5MzcwMTk3Mn0.xRFevGkvNIDEto9Em1W-_E8OIOeZQz95yu4vVGHl89c -->
+</body></html>
