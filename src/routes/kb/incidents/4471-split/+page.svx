@@ -1,0 +1,47 @@
+---
+layout: runbook
+title: '#4471 · three problems, not one'
+owner: support desk
+status: living
+reviewed: 2026-11-02
+signature: v1.eyJzdWIiOiIzMTk3IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2MTU1NzIsImV4cCI6MTc5MzcwMTk3Mn0.xRFevGkvNIDEto9Em1W-_E8OIOeZQz95yu4vVGHl89c
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import SplitCounts from '#lib/kb/SplitCounts.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) was marked known: one issue, one fix queued. The reports it holds
+come from three different problems. Fixing the parser closes only the first.
+
+## What is in it
+
+<SplitCounts />
+
+<Callout kind="warn">
+Not one issue. A parser fix does not touch the form hint, and neither explains the one-day shifts.
+</Callout>
+
+## The three problems
+
+1. **Parser reads dates month first.** Every tenant on file writes the day first, so their dates come out flipped. Ticket: [#1](https://github.com/dzmudist/megadev-training/issues/1).
+2. **`booking-v3` hint says `MM/DD/YYYY`.** People at day-first tenants type what the hint tells them, and the form reads it their way. A different bug: the hint is wrong. Ticket: [#2](https://github.com/dzmudist/megadev-training/issues/2).
+3. **One-day shift.** "Only June", "Lisbon got Tuesday, Toronto got Monday". This looks like time zones or daylight saving, not a swapped day and month. Ticket: [#3](https://github.com/dzmudist/megadev-training/issues/3).
+
+## How the desk tells them apart
+
+The cause depends on the tenant: their locale and the booking form they run. It does not depend
+on what intake tagged from the reporter's browser; that tag is a guess and is wrong for a share
+of the hint reports. The table below groups by tenant and form.
+
+<CauseTable ticket={4471} />
+
+## Lessons
+
+- Matching by subject ([decision 0001](/kb/decisions/0001-dedupe-by-subject)) merged three bugs into one ticket. Compare cause before you merge.
+- A count of reports is a count per problem. Say it in each ticket.
+
+<RenderStamp {signature} />
